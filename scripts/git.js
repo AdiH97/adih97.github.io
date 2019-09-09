@@ -14,7 +14,7 @@ jQuery.fn.loadRepositories = function(username) {
         var repos = data.data; // JSON Parsing
 
         // Debug
-        // console.log(data)
+        console.log(data)
         
         // sortByName(repos);    
      
@@ -30,7 +30,7 @@ jQuery.fn.loadRepositories = function(username) {
 
                 // title //
                 // Include url and name
-                var html = '<h1><a href="'+ (this.homepage?this.homepage:this.html_url) +'">' + this.name + '</a>';
+                var html = '<h1><a href="'+ (this.html_url) +'">' + this.name + '</a>';
 
                 // Include fork image if it's a forked repository
                 if(this.fork == true) {
