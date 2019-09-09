@@ -14,7 +14,7 @@ jQuery.fn.loadRepositories = function(username) {
         var repos = data.data; // JSON Parsing
 
         // Debug
-        console.log(data)
+        // console.log(data)
         
         // sortByName(repos);    
      
