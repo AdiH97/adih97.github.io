@@ -2,17 +2,21 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<div id="my-github-projects" class="posts" />
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <span class="prev">
+      <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="prev">
+        ← Anterior
+      </a>
+    </span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <span class="next">
+      <a href="{{ site.baseurl}}{{ paginator.next_page_path }}" class="next">
+        Siguiente →
+      </a>
+    </span>
+  {% endif %}
 </div>
